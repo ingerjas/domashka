@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+    <style>
+        body {
+            background-image: url('https://images.hdqwalls.com/download/neon-city-buildings-4k-on-2048x1152.jpg');
+            background-attachment: fixed;
+            color: white;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        label:hover {
+            color: fuchsia;
+        }
+        p:hover {
+            color: fuchsia;
+        }
+        div {
+            width: 600px;
+            padding: 20px;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px dotted rgba(0, 0, 0, 0.6);
+        }
+        .form-group {
+            margin-bottom: 15px;
+            width: 500px;
+            background-color: rgba(255, 255, 255, 0);
+            border: 1px dotted rgba(0, 0, 0, 0);
+        }
+        .form-textarea {
+            margin-bottom: 15px;
+            width: 500px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px dotted rgba(255, 255, 255, 0.6);
+            color: fuchsia;
+            resize: none;
+            outline: 0 ;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            letter-spacing: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            letter-spacing: 4px;
+        }
+        .input-field {
+            padding: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px dotted rgba(255, 255, 255, 0.3);
+            color: fuchsia;
+            outline: 0;
+        }
+        .input-field:focus {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        #planet_name {
+            color: fuchsia;
+            background-color: rgba(0, 0, 0, 0);
+            border: 0;
+            margin: auto;
+            outline: 0;
+        }
+        option {
+            background-color: black;
+        }
+        button {
+            padding: 10px;
+            color: fuchsia;
+            background-color: rgba(0, 0, 0, 0);
+            border: 1px dotted fuchsia;
+            margin: auto;
+            display: block;
+            width: 500px;
+        }
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+
+        }
+        button:active {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        #user-date {
+            border: 0;
+            outline: 0;
+            color: fuchsia;
+            background-color: rgba(0, 0, 0, 0);
+            color-scheme: invert 100%;
+        }
+        ::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Галактика Андромеда</h1>
+            <h2>Регистрация</h2>
+        <form action="/" method="get" autocomplete="off" validate></form>
+            <div class="form-group">
+                <label for="user-name">Имя:</label>
+                    <input type="text" name="name" placeholder="Ваше имя" id="user-name" class="input-field" autofocus>
+            </div>
+            <div class="form-group">
+                <label for="user-surname">Фамилия:</label>
+                    <input type="text" name="surname" placeholder="Ваша фамилия" id="user-surname" class="input-field">
+            </div>  
+            <div class="form-group"> 
+                 <p>Ваш пол:</p>
+                    <input type="radio" value="female" id="female" name="choose_sex">
+                <label for="female">Женщина</label> &nbsp;&nbsp;
+                    <input type="radio" value="male" id="male" name="choose_sex">
+                <label for="male">Мужчина</label> &nbsp;&nbsp;
+                    <input type="radio" value="none" id="none" name="choose_sex">
+                <label for="none">Ещё не определился</label>
+            </div>
+            <div class="form-group">
+                <label for="user-date">Укажите дату рождения:</label>
+                <input type="date" name="date" id="user-date" max="2022-08-26" min="1922-01-01">
+            </div>
+            <div class="form-group">
+                <label for="planet_name">Откуда вы:</label>
+                <select name="planet_name" id="planet_name">
+                    <option value="mercury">Меркурий</option>
+                    <option value="venus">Венера</option>
+                    <option value="earth">Земля</option>
+                    <option value="mars">Марс</option>
+                    <option value="jupiter">Юпитер</option>
+                    <option value="saturn">Сатурн</option>
+                    <option value="uranus">Уран</option>
+                    <option value="neptune">Нептун</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="user-tel">Телефон:</label>
+                    <input type="tel" name="tel" placeholder="Номер телефона" id="user-tel" class="input-field">
+            </div>
+            <div class="form-group">
+                <label for="user-email">E-mail:</label>
+                    <input type="email" name="email" placeholder="email@example.com" id="user-email" class="input-field">
+            </div>        
+            <div class="form-group">
+                <label for="user-pass">Пароль:</label>
+                    <input type="password" name="password" placeholder="Придумайте пароль" id="user-pass" class="input-field">
+            </div>        
+            <div class="form-group">
+                <p>Расскажите немного о себе:</p>
+                    <textarea class="form-textarea" name="text" id="user-about" placeholder="(Максимальное количество символов - 400. Так что очень сильно не старайтесь)." maxlength="400"></textarea>
+            </div>
+            <div class="form-group">
+                    <input type="checkbox" name="rules_agree" id="rules_agree1">
+                <label for="rules_agree1">Прочитал условия и согласен с тем, что земля круглая</label>
+            <br><br>
+                    <input type="checkbox" name="rules_agree" id="rules_agree2">
+                <label for="rules_agree2">Уверен, что знаю всю переодическую таблицу элементов наизусть</label> <br>
+            </div>
+            <div class="form-group">
+                <button type="submit">Полетели!</button>
+                <br>
+                <button type="reset" value="reset">Нет, передумал...</button>
+            </div>
+    </div>
+</body>
+</html>
